@@ -43,7 +43,7 @@ void sqlist_free(sqlist*&L);
 int main()
 {
     sqlist *L;
-    element a[5] ={{1,"beijing"},{2,"shanghai"},{3,"shenzhen"},{4,"guangzhou"},{5,"changchun"}};
+    element a[5] ={{1,"beijing"},{2,"shanghai"},{3,"shenzhen"},{4,"guangzhou}，{5,"changchun"}};
     sqlist_init(L,a,5);
     display(L);
     element b={6,"xi'an"};
