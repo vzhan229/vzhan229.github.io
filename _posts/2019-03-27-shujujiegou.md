@@ -14,91 +14,89 @@ tags:
 
 下面是我自己实现的代码，编译器通过了，结果也是对的，但是没准也会有错误存在
 
-```
-#include <stdio.h>
-#include <stdlib.h>
-#define Maxsize 10
-//建立线性表
-
-//将城市的各个参数进行数据封装
-typedef struct city
-{
-    int number;
-    char name[10];
-}element;
-
-//数据结构
-typedef struct sqlsit
-{
-    element data[Maxsize];
-    int length;
-}sqlist;
-
-//函数声明
-void sqlist_init(sqlist *&L,element a[],int j);
-int display(sqlist *L);
-void sqlist_insert(sqlist*&L,element b,int n);
-void sqlist_free(sqlist*&L);
-
-int main()
-{
-    sqlist *L;
-    element a[5] ={{1,"beijing"},{2,"shanghai"},{3,"shenzhen"},{4,"guangzhou}};
-    sqlist_init(L,a,4);
-    display(L);
-    element b={5,"chang chun"};
-    sqlist_insert(L,b,2);
-    display(L);
-    sqlist_free(L);
-    return 0;
-}
-
-//建立线性表的代码
-void sqlist_init(sqlist *&L,element a[],int j)
-{
-    int i=0;
-   // L=(sqlist *)malloc(sizeof(element)+4);
-   L=(sqlist *)malloc(sizeof(sqlist));
-    for(i=0;i<j;i++)
-    {
-        L->data[i]=a[i];
-    }
-    L->length=j;
-}
-
-//打印线性表内容
-int display(sqlist*L)
-{
-    if(L->length==0)
-        return -1;
-    else
-        for(int i=0;i<L->length;i++)
-        {
-            printf("%d  ",L->data[i].number);
-            printf("%s\n",L->data[i].name);
-        }
-        return 0;
-}
-
-//向线性表中插入元素
-void sqlist_insert(sqlist*&L,element b,int n)//n是插在第几个位置(从0开始)，b是要插入的元素
-{
-    int j=L->length;
-    for(int i=0;i<L->length-n+1;i++,j--)
-    {
-        L->data[j]= L->data[j-1];
-    }
-    L->data[n]=b;
-    L->length= L->length+1;
-
-}
-
-//释放空间
-void sqlist_free(sqlist*&L)
-{
-    free(L);
-}
-```
+> #include <stdio.h>
+> #include <stdlib.h>
+> #define Maxsize 10
+> //建立线性表
+>
+> //将城市的各个参数进行数据封装
+> typedef struct city
+> {
+>     int number;
+>     char name[10];
+> }element;
+>
+> //数据结构
+> typedef struct sqlsit
+> {
+>     element data[Maxsize];
+>     int length;
+> }sqlist;
+>
+> //函数声明
+> void sqlist_init(sqlist *&L,element a[],int j);
+> int display(sqlist *L);
+> void sqlist_insert(sqlist*&L,element b,int n);
+> void sqlist_free(sqlist*&L);
+>
+> int main()
+> {
+>     sqlist *L;
+>     element a[5] ={{1,"beijing"},{2,"shanghai"},{3,"shenzhen"},{4,"guangzhou}};
+>     sqlist_init(L,a,4);
+>     display(L);
+>     element b={5,"chang chun"};
+>     sqlist_insert(L,b,2);
+>     display(L);
+>     sqlist_free(L);
+>     return 0;
+> }
+>
+> //建立线性表的代码
+> void sqlist_init(sqlist *&L,element a[],int j)
+> {
+>     int i=0;
+>    // L=(sqlist *)malloc(sizeof(element)+4);
+>    L=(sqlist *)malloc(sizeof(sqlist));
+>     for(i=0;i<j;i++)
+>     {
+>         L->data[i]=a[i];
+>     }
+>     L->length=j;
+> }
+>
+> //打印线性表内容
+> int display(sqlist*L)
+> {
+>     if(L->length==0)
+>         return -1;
+>     else
+>         for(int i=0;i<L->length;i++)
+>         {
+>             printf("%d  ",L->data[i].number);
+>             printf("%s\n",L->data[i].name);
+>         }
+>         return 0;
+> }
+>
+> //向线性表中插入元素
+> void sqlist_insert(sqlist*&L,element b,int n)//n是插在第几个位置(从0开始)，b是要插入的元素
+> {
+>     int j=L->length;
+>     for(int i=0;i<L->length-n+1;i++,j--)
+>     {
+>         L->data[j]= L->data[j-1];
+>     }
+>     L->data[n]=b;
+>     L->length= L->length+1;
+>
+> }
+>
+> //释放空间
+> void sqlist_free(sqlist*&L)
+> {
+>     free(L);
+> }
 
 
 
