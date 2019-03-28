@@ -308,7 +308,7 @@ void sqstack_display(sqstack *&s)
 
 ```
 
-链栈
+## 链栈
 
 **链栈中栈顶就是与头结点挨着的那个节点。**
 
