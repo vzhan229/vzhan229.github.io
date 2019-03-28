@@ -14,7 +14,7 @@ tags:
 
 下面是我自己实现的代码，编译器通过了，结果也是对的，但是没准也会有错误存在
 
-```c++
+```
 #include <stdio.h>
 #include <stdlib.h>
 #define Maxsize 10
@@ -99,6 +99,8 @@ void sqlist_free(sqlist*&L)
     free(L);
 }
 ```
+
+
 
 ## 二、单链表
 
