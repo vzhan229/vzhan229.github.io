@@ -14,9 +14,11 @@ tags:
 
 编程语言排行榜见这里[网址](https://www.tiobe.com/tiobe-index/) 具体网址在这里https://www.tiobe.com/tiobe-index/（外国网站，你懂得![img](file:///C:\Users\asus\AppData\Local\Temp\SGPicFaceTpBq\12760\0F371C21.gif)）
 
+
+
 # C语言
 
-***学C语言一定要和内存结合起来，这样才能更好的解决更多的问题***
+***学C语言一定要和内存结合起来，这样才能更好的解决更多的问题。***
 
 ### （1）补码的基础
 
