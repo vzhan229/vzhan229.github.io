@@ -12,7 +12,9 @@ tags:
 
 
 
-编程语言排行榜见这里[网址](https://www.tiobe.com/tiobe-index/) 具体网址在这里https://www.tiobe.com/tiobe-index/（外国网站，你懂得![img](file:///C:\Users\asus\AppData\Local\Temp\SGPicFaceTpBq\12760\0F371C21.gif)）
+编程语言排行榜见这里[网址](https://www.tiobe.com/tiobe-index/) 具体网址在这里https://www.tiobe.com/tiobe-index/（外国网站，你懂得）
+
+![img](https://s2.ax1x.com/2019/04/27/EK7DW4.gif)
 
 
 
@@ -175,13 +177,14 @@ void *类型可以指向任何一个类型的指针
 
 
 
-void (*signal(int sig, void (*func) (int))) (int)
+`void (*signal(int sig, void (*func) (int))) (int)`
 
 **signal仍然是一个函数**，他返回一个函数指针，这个指针指向的函数没有返回值，只有一个int类型的参数
 
 #### 插一个二维数组
 ```c
 a[5][7];//用指针访问就是*（*（p+5）+7）
+int (*p)[7]=a;
 ```
 
 ### （7）函数参数问题
@@ -191,13 +194,18 @@ a[5][7];//用指针访问就是*（*（p+5）+7）
 ```c
 int func(int a[]);
 int func(int *a);//等价
+
+//可以把数组当成指针来理解，但是其实不太一样
 ```
 
 ##### ②函数参数是二维数组
 
-```
-int func(int a[][5]);//后面的那个大小必须写
-int func(int (*p)[5]);//参数指向二维数组,就像一个int变量，传参数传的是int*，是个指针一样
+```c
+int func(int a[][5]);
+//后面的那个大小必须写
+
+int func(int (*p)[5]);
+//参数指向二维数组,就像一个int变量，传参数传的是int*，是个指针一样
 
 ```
 
@@ -215,7 +223,7 @@ int func(char **c);
 int func(char**c);
 ```
 
-
+指针数组和二重指针可以看成是一个东西，就像一维数组可以看成一维指针一样。
 
 ### （8）函数递归与迭代
 
@@ -249,16 +257,23 @@ char p[]="linux" 这个是字符数组，相当于初始化数组，可以更改
 int Add(int num, ...)
 {
     int sum = 0;
+    
     va_list arg;				//用于访问参数列表不确定的部分
-    va_start(arg, num);			//初始化上面的边浪
+    
+    va_start(arg, num);			//初始化上面的变量
 
     for (int i = 0; i < num; i++)
     {
-        sum += va_arg(arg, int);	//访问参数，接收两个参数，上面的变量和参数列表中下一个参数的类型
+        sum += va_arg(arg, int);	
+        
+        //访问参数，接收两个参数，上面的变量和参数列表中下一个参数的类型
+        
     }
 
     va_end(arg);	//访问完毕，调用这个宏
+    
     return sum;
+    
 }
 int main()
 {
@@ -289,7 +304,7 @@ typedef struct {
 	unsigned char *curp; 	/* 当前读写位置 */
 	unsigned istemp; 		/* 临时文件指示 */
 	short token;	 		/* 用作无效检测 */
-} FILE ; 				/* 结构体类型名 FILE * 
+} FILE ; 				/*结构体类型名 FILE */
 ```
 
 **（1）fopen（）函数：打开文件**
@@ -320,7 +335,7 @@ ab+	读写打开一个二进制文件，允许读或在文件末追加数据
 
 
 
-**fread（）函数和fwrite（）函数**
+**fread（）函数和fwrite（）函数：二进制文件读写函数**
 
 
 1.一般调用形式
@@ -529,6 +544,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/hgfs/Winshare/s5pv210/AdvancedC/4.6
 int i; //声明，也是定义 
 
 ### （17）相关算法
+
+冒泡排序算法
 
 ```c
 
