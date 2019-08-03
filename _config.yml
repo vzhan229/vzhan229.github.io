@@ -7,7 +7,7 @@ description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, 孟超的博客, mengchaobbbigrui, 孟超"
 url: "https://vzhan229.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/mengchaobbbigrui.github.io.git" # you code repository
+github_repo: "https://github.com/vzhan229.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
