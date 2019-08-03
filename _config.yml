@@ -1,11 +1,11 @@
 # Site settings
-title: 孟超
-SEOTitle: 孟超的博客 | 孟超
+title: Ricky
+SEOTitle: Ricky的博客 | Ricky
 header-img: img/post-bg-desk.jpg
-email: mengchaobbbigrui@gmail.com
+email: 190469261@qq.com
 description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, 孟超的博客, mengchaobbbigrui, 孟超"
-url: "http://mengchaobbbigrui.github.io"          # your host, for absolute URL
+url: "https://vzhan229.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/qiubaiying/mengchaobbbigrui.github.io.git" # you code repository
 
@@ -19,11 +19,11 @@ sidebar-avatar: /img/myself.jpg    # use absolute URL, seeing it's used in both 
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-zhihu_username:     mengchaobbbigrui
-github_username:    mengchaobbbigrui
-facebook_username:     Chao Meng
-jianshu_username:   86e7cbec3b3a
-#twitter_username:   qiubaiying
+zhihu_username:     TBA
+github_username:    TBA
+facebook_username:     TBA
+jianshu_username:   TBA
+#twitter_username:   TBA
 
 
 
